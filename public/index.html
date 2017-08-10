@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+I'm INdex.HTML
+
+<head>
+    <title>Customer ContactList</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/loginCtrl.js"></script>
+    <script src="js/registrationCtrl.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/forgotPswdCtrl.js"></script>
+    <script src="js/getDetailsCtrl.js"></script>
+    <script src="js/addContactsCtrl.js"></script>
+    <script src="js/editCtrl.js"></script>
+    <link rel="stylesheet" type="text/css" href="styling.css"></head>
+
+    <body ng-app="contactsApp">
+
+        <ui-view></ui-view>
+        <script>
+            var app = angular.module('indexCtrlModule', ['ui.router']);
+            app.controller('indexController', [function() {
+                console.log("entered index controller");
+            }])
+
+        </script>
+
+    </body>
+
+</html>

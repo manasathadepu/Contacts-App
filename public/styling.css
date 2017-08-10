@@ -1,0 +1,155 @@
+.navbar-default {
+    background-color: #383333;
+    border-color: black;
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+
+/*
+.navbar-nav{
+    margin:20px;
+
+}
+*/
+
+#headerH3 {
+    float: right;
+    padding-left: 5px;
+}
+
+.navbar-collapse {}
+
+.navbar-header {
+    padding: 20px 10px 1px 30px;
+}
+
+#content {
+    margin-top: 40px;
+}
+
+#customerContainer {
+    background-color: aliceblue;
+    text-align: center;
+}
+
+#customerRow {
+    padding: 6px
+}
+
+
+/*
+.container{
+    
+    background-color: beige;
+    width: 825px;
+}
+*/
+
+#editRow {
+    /*
+    margin-left: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+*/
+    margin: 15px 0px 15px 100px;
+}
+
+#labelId {
+    font-style: italic;
+    font-size: larger;
+    text-align: left;
+}
+
+
+/*
+#labelId1{
+    
+font-style: italic;
+    font-size: larger;
+}
+*/
+
+#textId {
+    /*
+    padding-right: 100px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+        padding: 5px 100px 5px 5px;
+*/
+}
+
+
+/*
+#buttonRow{
+    margin-left: 260px;
+    margin-bottom: 10px;
+}
+*/
+
+#success {
+    margin-left: 30px;
+}
+
+#customerContent {
+    margin: 10px;
+}
+
+table {
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}
+
+
+/*
+#buttonDiv{
+   margin-left: 50px; 
+        margin-bottom: 20px;
+
+}
+*/
+
+#navinput {
+    margin-left: -30px;
+}
+
+.searchDiv {
+    margin: 37px 20px 10px;
+}
+
+#search {
+    color: black;
+}
+
+#errormsg {
+    color: red;
+    margin-bottom: 20px;
+}
+
+#content,
+#homediv {
+    padding-left: 40px;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+footer {
+    text-align: center;
+}
+
+fieldset {
+    padding: 10px;
+}
+
+#logoutbtn {
+    margin-left: 90%;
+}

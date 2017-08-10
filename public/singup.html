@@ -1,0 +1,99 @@
+<div id="singId" class="container">
+    <div id="singUpRow" class="row">
+        <form name="singUpForm" class="form-horizontal">
+            <div class="form-group">
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="loginUserName">UserName</label>
+                </div>
+                <div id="userId" class="col-md-4 col-sm-6">
+                    <input type="text" name="username" class="form-control" ng-model="registration.username" placeholder="enter your username" ng-pattern="/^[a-zA-Z]+$/" required/>
+                    <div ng-show="singUpForm.username.$invalid && singUpForm.username.$dirty && singUpForm.username.$error.required" class="errorMessage" style="color:red">Account Name Required </div>
+                    <div ng-show="singUpForm.username.$error.pattern" class="errorMessage">
+                        <span style="color:red">No special characters and numbers are  allowed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="password">Password</label>
+                </div>
+                <div id="pswdId" class="col-md-4 col-sm-6">
+                    <input type="password" name="password" class="form-control" ng-model="registration.password" placeholder="enter your password" required/>
+                    <div ng-show="singUpForm.password.$invalid && singUpForm.password.$dirty && singUpForm.password.$error.required" class="errorMessage" style="color:red">Account Name Required </div>
+                    <div ng-show="singUpForm.passwod.$error.pattern" class="errorMessage">
+                        <span style="color:red">No special characters and numbers are  allowed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="firstname"> FirstName</label>
+                </div>
+                <div id="fnameId" class="col-md-4 col-sm-6">
+                    <input type="text" name="firstname" class="form-control" ng-model="registration.firstname" placeholder="enter your firstname" ng-pattern="/^[a-zA-Z]+$/" required/>
+                    <div ng-show="singUpForm.firstname.$invalid && singUpForm.firstname.$dirty && singUpForm.firstname.$error.required" class="errorMessage" style="color:red">Account Name Required </div>
+                    <div ng-show="singUpForm.firstname.$error.pattern" class="errorMessage">
+                        <span style="color:red">No special characters and numbers are  allowed</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="lastname">  LastName</label>
+                </div>
+                <div id="lnameId" class="col-md-4 col-sm-6">
+                    <input type="text" name="lastname" class="form-control" ng-model="registration.lastname" placeholder="enter your lastname" ng-pattern="/^[a-zA-Z]+$/" required>
+                    <!--                    <span id="erromsg"></span>-->
+                    <div ng-show="singUpForm.lastname.$invalid && singUpForm.lastname.$dirty && singUpForm.lastname.$error.required" class="errorMessage" style="color:red">Account Name Required </div>
+                    <div ng-show="singUpForm.lastname.$error.pattern" class="errorMessage">
+                        <span style="color:red">No special characters and numbers are allowed</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="email">  Email</label>
+                </div>
+                <div id="emailId" class="col-md-4 col-sm-6">
+                    <input type="text" name="email" ng-model="registration.email" class="form-control" ng-pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" placeholder="enter valid email address" required/>
+
+                    <div ng-show="singUpForm.email.$invalid && singUpForm.email.$dirty && singUpForm.email.$error.required" class="errorMessage" style="color:red">Email Required </div>
+                    <div ng-show="singUpForm.email.$error.pattern" class="errorMessage">
+                        <span style="color:red">valid email address is required</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="phonenumber">  Phone</label>
+                </div>
+                <div id="phoneId" class="col-md-4 col-sm-6">
+                    <input type="text" name="phonenumber" ng-model="registration.phonenumber" class="form-control" placeholder="phonenumber" ng-pattern="/^\d{10}$/" required>
+                    <div ng-show="singUpForm.phonenumber.$invalid && singUpForm.phonenumber.$dirty && singUpForm.phonenumber.$error.required" class="errorMessage" style="color:red">phonenumber Required </div>
+                    <div ng-show="singUpForm.phonenumber.$error.pattern" class="errorMessage">
+                        <span style="color:red">valid phonenumber is required</span>
+                    </div>
+                </div>
+            </div>
+            <div class="from-group">
+                <div id="buttonRow" class="col-md-4 ">
+                    <button type="button" class="btn btn-primary" ui-sref="home">Cancel</button>
+                    <button type="submit" class="btn btn-success" ng-disabled="singUpForm.$invalid" ng-click="registration.addCustomer()">Submit
+            </button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>

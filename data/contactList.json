@@ -1,0 +1,24 @@
+{
+    "contactList": [{
+        "firstName": "manasa",
+        "lastName": "thadepu",
+        "phone": "3462286883",
+        "email": "manasa.thadepu@gmail.com",
+        "work": "3462286883",
+        "id": 2
+    }, {
+        "firstName": "anuradha",
+        "lastName": "thadepu",
+        "phone": "4703348446",
+        "email": "anuradha@yahoo.com",
+        "work": "2487049855",
+        "id": 4
+    }, {
+        "firstName": "dfdsfdf",
+        "lastName": "sfwffsa",
+        "phone": "1223245465",
+        "email": "sfad.tvs@gmail.com",
+        "work": "1234567890",
+        "id": 5
+    }]
+}

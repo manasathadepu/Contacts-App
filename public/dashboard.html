@@ -1,0 +1,33 @@
+<div ng-if="ifLoggedIn">
+    <header class="container-fluid">
+        <div id="menu" class="navbar navbar-default">
+            <div class="navbar-header">
+                <span id="imgPadding"><img width="100px" src="logo.jpg" alt="logo" target="_self" >
+                       </span>
+                <div id="headerH3">
+                    <h3>Welcome {{dashboard.name}}</h3>
+                </div>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="nav">
+                    <a ui-sref=".contactList">
+                        <h3>customerList</h3>
+                    </a>
+                </li>
+                <li class="nav">
+                    <a ui-sref=".addContact">
+                        <h3>addContact</h3>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+    <div>
+        <button class="btn btn-primary" id="logoutbtn" ng-click='dashboard.logOut();'>
+                        <h3>Logout</h3>
+                    </button></div>
+    <ui-view></ui-view>
+
+</div>

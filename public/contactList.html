@@ -1,0 +1,31 @@
+<div id='location'>
+    <div class=table-responsive>
+        <table class='table table-striped table-bordered table-hover'>
+            <thead>
+
+                <th>s.no </th>
+                <th>Id</th>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Work</th>
+
+            </thead>
+            <tbody>
+                <tr ng-repeat="list in customerDetails">
+                    <td>{{$index+1}}</td>
+                    <td>{{list.id}}</td>
+                    <td>{{list.firstName}}</td>
+                    <td>{{list.lastName}}</td>
+                    <td>{{list.phone}}</td>
+                    <td>{{list.email}}</td>
+                    <td>{{list.work}}</td>
+                    <td ng-controller="editCtrl">
+                        <a ng-click="editContact(list.id);" class='btn btn-info' role="button">  edit  </a></td>
+                    <td><a ng-click='deleteContact(list.id)' class='btn btn-info' role="button"> delete </a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div ui-view></div>

@@ -1,0 +1,106 @@
+<div id="loginPage" class="container">
+    <div id="loginRow" class="row">
+        <div ng-model="login.failure" ng-show="login.failure==false">
+            <h3 style="color:red">checkyour username and password</h3>
+        </div>
+        <form name="loginForm" class="form-horizontal">
+
+            <div class="form-group">
+                <div id="labelId">
+                    <label for="loginUserName">UserName</label>
+                </div>
+                <div id="userId" class="col-md-4 col-sm-6">
+                    <input type="text" name="username" class="form-control" ng-model="login.username" placeholder="enter your username" ng-pattern="/^[a-zA-Z]+$/" required/>
+                    <div ng-show="loginForm.username.$invalid && loginForm.username.$dirty && loginForm.username.$error.required" class="errorMessage" style="color:red">Account Name Required </div>
+                    <div ng-show="loginForm.username.$error.pattern" class="errorMessage">
+                        <span style="color:red">No special characters and numbers are  allowed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div id="labelId">
+                    <label for="password">Password</label>
+                </div>
+                <div id="pswdId" class="col-md-4 col-sm-6">
+                    <input type="password" name="password" class="form-control" ng-model="login.password" placeholder="enter your password" required/>
+                    <div ng-show="loginForm.password.$invalid && loginForm.password.$dirty && loginForm.password.$error.required" class="errorMessage" style="color:red">Account Name Required </div>
+                    <div ng-show="loginForm.passwod.$error.pattern" class="errorMessage">
+                        <span style="color:red">No special characters and numbers are  allowed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="from-group">
+                <div id="buttonRow" class="col-md-4 ">
+                    <button type="button" class="btn btn-primary" ui-sref="home">Cancel</button>
+                    <button type="reset" class="btn btn-info">reset</button>
+                    <button type="button" class="btn btn-success" ng-disabled="loginForm.$invalid" ng-click="login.loginCustomer();">Submit
+            </button>
+                </div>
+<!--
+<span> <a ui-sref="login.forgotPswd">    <h6></h6></a></span>
+-->
+            </div>
+
+
+
+        </form>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">forgot password?</button>
+
+        <!-- Modal -->
+        <!--        <div ng-controller="forgotPswdCtrl as forgotPswd">-->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">forgot your passwod?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="text-center">
+
+                                        <p>If you have forgotten your password you can reset it here.</p>
+                                        <div class="panel-body">
+                                            <div ng-model="checkData" ng-show="checkData==false">
+                                                <h3 style="color:red">Entervalid Email</h3>
+                                            </div>
+                                            <fieldset>
+                                                <div class="form-group">
+                                                    <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="email" ng-model="login.email">
+                                                </div>
+                                                <input class="btn btn-lg btn-primary btn-block" ng-click="login.checkEmail();" value="submit" type="button">
+
+                                            </fieldset>
+
+                                            <fieldset>
+                                                <div ng-model="checkData" ng-show="checkData.status==true">
+                                                    resetPassword:<input type="password" name='resetPswd' ng-model='login.restPwsd' />
+                                                    <button type='button' ng-click='login.resetPswd(login.restPwsd);'>resetPassword</button>
+                                                </div>
+                                                <div ng-model="checkData" ng-show="checkData==true">
+                                                    <h2>successFully changed</h2>
+                                                </div>
+                                            </fieldset>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--        </div>-->
+    </div>
+
+</div>
+<ui-view></ui-view>

@@ -1,0 +1,94 @@
+<div id=" editCutomer" class="container">
+    <div id="editRow" class="row">
+        <form name="myForm" class="form-horizontal">
+
+            <div class="form-group">
+
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="firstname"> FirstName</label>
+                </div>
+                <div id="fnameId" class="col-md-4 col-sm-6">
+                    <input type="text" name="firstname" class="form-control" ng-model="firstname" placeholder="enter your firstname" ng-pattern="/^[a-zA-Z]+$/" required/>
+                    <div ng-show="myForm.firstname.$invalid && myForm.firstname.$dirty && myForm.firstname.$error.required" class="errorMessage" style="color:red">Account Name Required </div>
+                    <div ng-show="myForm.firstname.$error.pattern" class="errorMessage">
+                        <span style="color:red">No special characters and numbers are  allowed</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="lastname">  LastName</label>
+                </div>
+                <div id="lnameId" class="col-md-4 col-sm-6">
+                    <input type="text" name="lastname" class="form-control" ng-model="lastname" placeholder="enter your lastname" ng-pattern="/^[a-zA-Z]+$/" required>
+                    <!--                    <span id="erromsg"></span>-->
+                    <div ng-show="myForm.lastname.$invalid && myForm.lastname.$dirty && myForm.lastname.$error.required" class="errorMessage" style="color:red">Account Name Required </div>
+                    <div ng-show="myForm.lastname.$error.pattern" class="errorMessage">
+                        <span style="color:red">No special characters and numbers are allowed</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="email">  Email</label>
+                </div>
+                <div id="emailId" class="col-md-4 col-sm-6">
+                    <input type="text" name="email" ng-model="email" class="form-control" ng-pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" placeholder="enter valid email address" required/>
+
+                    <div ng-show="myForm.email.$invalid && myForm.email.$dirty && myForm.email.$error.required" class="errorMessage" style="color:red">Email Required </div>
+                    <div ng-show="myForm.email.$error.pattern" class="errorMessage">
+                        <span style="color:red">valid email address is required</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="phonenumber">  Phone</label>
+                </div>
+                <div id="phoneId" class="col-md-4 col-sm-6">
+                    <input type="text" name="phonenumber" ng-model="phonenumber" class="form-control" placeholder="phonenumber" ng-pattern="/^\d{10}$/" required>
+                    <div ng-show="myForm.phonenumber.$invalid && myForm.phonenumber.$dirty && myForm.phonenumber.$error.required" class="errorMessage" style="color:red">phonenumber Required </div>
+                    <div ng-show="myForm.phonenumber.$error.pattern" class="errorMessage">
+                        <span style="color:red">valid phonenumber is required</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div id="labelId" class="control-label col-md-2">
+                    <label for="work"> Work</label>
+                </div>
+                <div id="workId" class="col-md-4 col-sm-6">
+                    <input type="text" name="work" ng-model="work" class="form-control" ng-pattern="/^\d{10}$/" placeholder="enter your work number" required>
+                    <div ng-show="myForm.work.$invalid && myForm.work.$dirty && myForm.work.$error.required" class="errorMessage" style="color:red">work phonenumber Required </div>
+                    <div ng-show="myForm.work.$error.pattern" class="errorMessage">
+                        <span style="color:red">valid work phonenumber is required</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="errormsg">
+
+            </div>
+            <div class="from-group">
+                <div id="buttonRow" class="col-md-4 ">
+                    <button type="button" class="btn btn-primary" ui-sref="home">Cancel</button>
+                    <button type="submit" class="btn btn-success" ng-disabled="myForm.$invalid" ng-click="addCustomer()">Submit
+            </button>
+                </div>
+            </div>
+            <input type="hidden" class="btn btn-success" onclick="addCustomer(event)" name="id" />
+
+
+        </form>
+    </div>
+</div>

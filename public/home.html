@@ -1,0 +1,37 @@
+<div ng-if="isLoginPage" ng-controller="indexController">
+    home
+    <header class="container-fluid">
+        <div id="menu" class="navbar navbar-default">
+            <div class="navbar-header">
+                <span id="imgPadding"><img width="100px" src="logo.jpg" alt="logo" target="_self" >
+                       </span>
+                <div id="headerH3">
+                    <h3>Customer Management</h3>
+                </div>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav">
+                    <a ui-sref="home">
+                        <h3>Home</h3>
+                    </a>
+                </li>
+                <li class="nav">
+                    <a ui-sref=".login">
+                        <h3>SingIn</h3>
+                    </a>
+                </li>
+                <li class="nav">
+                    <a ui-sref=".singup">
+                        <h3>SingUp</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+</div>
+
+
+
+<div ui-view>
+    <h1> Welcome to Customer Management Serive </h1>
+</div>
